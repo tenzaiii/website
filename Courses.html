@@ -41,14 +41,14 @@
             individuals</p>
         </div>
         <div class="course-col">
-            <img src="IMG/STEM.jpg" alt="isaal1">
+            <img src="IMG/HUMSS.jpg" alt="isaal1">
             <h3>HUMSS</h3>
             <p>Marian School of Quezon City is a Filipino, Christian Institution of 
             learning established by an academic community of committed and responsible 
             individuals</p>
         </div>
         <div class="course-col">
-            <img src="IMG/STEM.jpg" alt="isaal1">
+            <img src="IMG/ICT.jpg" alt="isaal1">
             <h3>ICT</h3>
             <p>Marian School of Quezon City is a Filipino, Christian Institution of 
             learning established by an academic community of committed and responsible 
@@ -57,14 +57,14 @@
        </div>   
        <div class="row2">
         <div class="course-col">
-            <img src="IMG/STEM.jpg" alt="isaal1">
+            <img src="IMG/ABM.jpg" alt="isaal1">
             <h3>ABM</h3>
             <p>Marian School of Quezon City is a Filipino, Christian Institution of 
             learning established by an academic community of committed and responsible 
             individuals</p>
         </div>
         <div class="course-col">
-            <img src="IMG/STEM.jpg" alt="isaal1">
+            <img src="IMG/CULINARY.jpg" alt="isaal1">
             <h3>CULINARY</h3>
             <p>Marian School of Quezon City is a Filipino, Christian Institution of 
             learning established by an academic community of committed and responsible 
@@ -110,5 +110,17 @@
 <footer> 
     &copy; 2024 Marian School of Quezon City
 </footer>
+<script>
+    var mode = document.getElementById("mode");
+
+   mode.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                mode.src = "img/sun.png";
+            }else{
+                mode.src = "img/moon.png";
+            }
+        }
+</script>
 </body>
 </html>

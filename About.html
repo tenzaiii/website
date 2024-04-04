@@ -120,5 +120,17 @@
 <footer> 
     &copy; 2024 Marian School of Quezon City
 </footer>
+<script>
+    var mode = document.getElementById("mode");
+
+   mode.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                mode.src = "img/sun.png";
+            }else{s
+                mode.src = "img/moon.png";
+            }
+        }
+</script>
 </body>
 </html>
