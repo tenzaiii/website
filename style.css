@@ -1,31 +1,9 @@
+
+
 *{
     margin: 0;
     padding: 0;
 }
-
-:root{
-    --primary-color: #fff;
-    --secondary-color: #28282B;
-
-
-}
-
-.dark-theme{
-    --primary-color: #28282B;
-    --secondary-color: #fff;
-   
-}
-
-body{
-    background-color: var(--primary-color);
-}
-
-#mode{
-    width: 30px;
-    cursor: pointer;
-}
-
-
 
 .header{
     min-height: 70vh;
@@ -35,6 +13,19 @@ body{
     background-size: cover;
     position: relative;
 }
+
+/*--darkmode--*/
+
+.darkmode-mode-screen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0L;
+    background: white;
+    mix-blend-mode: difference;
+}
+
 
 .logo{
     width: 75%;
@@ -64,7 +55,7 @@ text-align: right;
 }
 
 .nav-links ul li a{
-    color: #fff;
+    color:#fff;
     text-decoration:none;
 }
 
@@ -82,15 +73,9 @@ text-align: right;
     width:100%;
 }
 
-.nav-links ul img{
-    
-}
-
-
-
 .text-box{
     width: 90%;
-    color: #fff;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -100,21 +85,19 @@ text-align: right;
 
 .text-box h1{
     font-size: 62px;
-    color: #fff;
-
 }
 
 .text-box p{
     margin: 10px 0 40px;
     font-size: 14px;
-    color: #fff;
+    color: white;
 }
 
 .hero-btn{
     display: inline-block;
     text-decoration: none;
-    color:#fff;
-    border: 1px solid #fff;
+    color:white;
+    border: 1px solid white;
     padding: 12px 34px;
     font-size: 13px;
     background: transparent;
@@ -166,49 +149,16 @@ nav .fa{
     }
 }
 
-/*--news--*/
-
-.latestnews{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-    background-color: var(--primary-color);
-}
-.news{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.news img{
-    width: 100%;
-    display: block;
-}
-
-.layer{
-    background: transparent;
-    height:100%;
-    width:100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-}
-
-
-
 /*--course--*/
 .courses-header{
-    height: 50vh;
+    height: 70vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(IMG/C.gif);
     background-position: center;
+    position: relative;
     background-size:cover;
     text-align: center;
-    color: var(--primary-color);
+    color: white;
 }
 .courses-header h1{
     margin-top: 100px;
@@ -222,14 +172,11 @@ nav .fa{
 }
 
 h1{
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-    
+    font-size: 50px;
+    font-weight: 600;}
 
 p{
-    color: var(--secondary-color);
+    color: black;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
@@ -250,19 +197,19 @@ p{
     
 .course-col{
     flex-basis: 31%;
-    background: yellow;
+    background: #FCDC2A;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition:0.5s;
+    isolation: isolate;
 }
 
 .course-col img{
-    width: 100%;
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
-    min-height: 300px;
-    min-width: 300px;
 }
 
 h3{
@@ -288,7 +235,7 @@ h3{
 
 .learn-btn:hover{
     border: 1px solid black;
-    background: var(--primary-color);
+    background: white;
     transition: 1s;
 }
 
@@ -305,7 +252,7 @@ h3{
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
-    text-align: left;
+    text-align: center;
 }
 
 .facilitiesimage img{
@@ -323,7 +270,36 @@ h3{
     text-align: center;
 }
 
+/*--news--*/
 
+.latestnews{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.news{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
 
 /*--sportsfest--*/
 .sportsfest {
@@ -356,15 +332,7 @@ h3{
     text-align: left;
 }
 
-footer {
-    background: yellow;
-    color: black;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: auto;
-}
+
 
 /*--admissions--*/
 
@@ -374,13 +342,34 @@ footer {
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(IMG/Rbgd.jpg);    
     background-position: center;
     background-size: cover;
+    position: relative;
     border-radius: 10px;
     text-align: center;
     padding: 100px 0;
 }
 
 .admissions h1{
-    color: var(--secondary-color);
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/*---------------------Media---------------------*/
+
+.media{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(IMG/Rbgd.jpg);    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.media h1{
+    color: white;
     margin-bottom: 40px;
     padding: 0;
 }
@@ -388,13 +377,14 @@ footer {
 /*---------------------about us---------------------*/
 
 .about-header{
-    height: 50vh;
+    height: 70vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(IMG/aboutus.jpg);
     background-position: center;
     background-size:cover;
     text-align: center;
-    color: var(--primary-color);
+    position: relative;
+    color: white;
 }
 .about-header h1{
     margin-top: 100px;
@@ -423,24 +413,86 @@ footer {
 }
 
 .yellow-btn { 
-    border: 1px solid yellow;
-    background: yellow;
+    border: 1px solid #FCDC2A;
+    background: #FCDC2A;
     color: black;
 }
 .yellow-btn:hover {
-    color: var(--primary-color);
+    color: white;
 }
 
 /*--footer--*/
 
+
+
 .footer{
-    width:100;
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 15px;
+    position: relative;
     text-align: center;
-    padding: 30px 0;
+    width: auto;
+    bottom: 0;
+
+
+    isolation: isolate;
 }
 
-.footer h4{
-    margin-bottom: 25px;
+.footer p{
+    color: #8a8a8a;
+
+}
+
+.footer h3{
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+
+}
+ul{
+    list-style-type: none;
+}
+
+.app-logo{
     margin-top: 20px;
-    font-weight: 600;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright{
+    text-align: center;
 }
