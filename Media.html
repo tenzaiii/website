@@ -14,7 +14,11 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="IMG/logo.ico">
+
+
   </head>
+  
   <body>
     <style>
       body {
@@ -25,8 +29,7 @@
     <section class="about-header">
       <nav>
         <a href="index.html"
-          ><img src="IMG/logo.png" alt="'logo" class="logo"
-        /></a>
+        ></a>
         <div class="nav-links">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
@@ -36,12 +39,30 @@
             <li><a href="Admissions.html">ADMISSIONS</a></li>
             <li><a href="Media.html">MEDIA</a></li>
             <li><a href="Citadel.html">CITADEL</a></li>
-            <li><a href="Contact.html">CONTACT</a></li>
           </ul>
         </div>
       </nav>
       <h1>Media</h1>
     </section>
+    
+    
+    <div class="w3-content" style="max-width:800px">
+      <img class="mySlides" src="IMG/citadel_1.JPG" style="width:100%">
+      <img class="mySlides" src="IMG/citadel_2.JPG" style="width:100%">
+      <img class="mySlides" src="IMG/citadel_3.JPG" style="width:100%">
+    </div>
+    
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+      <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+    </div>
+ 
+
     <section class="footer">
       <div class="row">
           <div class="footer-col-1">
@@ -68,7 +89,7 @@
           <div class="footer-col-4">
               <h3>Follow us</h3>
               <ul>
-                  <li>Facebook</li>
+                  <li><a href="https://www.facebook.com/marianschool">Facebook</a></li>
                   <li>Twitter</li>
                   <li>Instagram</li>
                   <li>YouTube</li>
@@ -79,7 +100,37 @@
           <p class="copyright">Copyright 2024 All Rights Reserved</p>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script src="script.js"></script>
+    
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " w3-red";
+      }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+      <script src="script.js"></script>
   </body>
+
 </html>

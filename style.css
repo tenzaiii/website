@@ -12,6 +12,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    isolation: isolate;
 }
 
 /*--darkmode--*/
@@ -19,7 +20,7 @@
 .darkmode-mode-screen {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0L;
     background: white;
@@ -169,6 +170,8 @@ nav .fa{
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    isolation: isolate;
+
 }
 
 h1{
@@ -333,6 +336,40 @@ h3{
 }
 
 
+/*--about-us--*/
+.about {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.aboutimage {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.aboutimage img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutimage p {
+    padding: 0;
+}
+
+.aboutimage h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.blank{
+    width: 100%;
+}
 
 /*--admissions--*/
 
@@ -406,6 +443,7 @@ h3{
 }
 
 .about h1{
+    font-family: Arial, Helvetica, sans-serif;
     padding-top: 0;
 }
 .about p{
@@ -465,7 +503,7 @@ h3{
 }
 
 .footer-col-2 img{
-    width: 180px;
+    width: 250px;
     margin-bottom: 20px;
 }
 
@@ -496,3 +534,81 @@ ul{
 .copyright{
     text-align: center;
 }
+
+.admissionform{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+/*--MediaA--*/
+
+
+.w3-content{
+    background-position: center;
+    text-align: center;
+    display: block;
+    margin: auto;
+    
+}
+
+.w3-button, .w3-center {
+    border: none;
+    background-position: center;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* blog */
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    position: static;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    text-align: center;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+  }
+  
+  /* Create three equal columns that float next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row-1 {
+    margin-top: 5%;
+    display: inline-flex;
+    justify-content: space-between;
+    height: fit-content;    
+
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
